@@ -1,0 +1,426 @@
+body {
+	background-image:url('../assets/pictures/background-death-star.jpg');
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+
+	background-color: #cccccc; /* Used if the image is unavailable */
+	height: 500px; /* You must set a specified height */
+	background-position: center; /* Center the image */
+
+
+  }
+
+  .logo {	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	height: auto;
+  }
+
+
+  .header {
+	color: gold;
+	text-align: center;
+	/*text-decoration-line: underline; */
+	font-weight: normal;
+	font-size: 50px;
+	font-family: 'star jedi hollow';
+	background: #414042;
+	border: gold 3px;
+	padding: 10px 20px;
+	width: 100%;
+	
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	position: sticky;
+	top: 10px;
+  }
+
+.colors {
+	color: #414042;
+	color: #eee6dd;
+	color: #a5978c;
+	color: #93221f;
+	color: #3299de;
+}
+
+.menu {
+	color: #fff;
+	text-align: center;
+	font-weight: normal;
+	font-family: 'star jedi';
+	font-size: 35px;
+	background: #333;
+	padding: 20px 15%;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	position: sticky;
+	top: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.menu {
+		padding: 20px 10%;
+		font-size: 25px;
+	}
+  }
+
+@media only screen and (max-width: 700px) {
+	.menu {
+		padding: 20px 5%;
+		font-size: 15px;
+	}
+  }
+
+
+.usernamepassword {
+	margin: 40px;
+	padding: 10px;
+	font-family: system-ui;
+	text-shadow: #372e29;
+	background-color: antiquewhite;
+	overflow: hidden;
+	border-radius: 20px;
+	border: 1px solid #372e29;
+
+}
+
+.about {
+	background: #907c6a;
+	margin: 40px;
+	font-family: system-ui;
+	overflow: hidden;
+	border-radius: 20px;
+	border: 1px solid #372e29;
+	padding: 20px;
+	padding-left: 25px;
+	position: static;
+	text-align: left;
+	color: antiquewhite;
+}
+
+.schoolgrounds {	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	border: 2px solid #372e29;
+	width: 450px;
+	height: auto;
+	float: center;
+  }
+
+.founders {	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	border: 2px solid #372e29;
+	width: 450px;
+	height: auto;
+	float: center;
+  }
+
+.train {	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	border: 2px solid #372e29;
+	width: 450px;
+	height: auto;
+	float: center;
+  }
+
+.house-header {
+	background: #907c6a;
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 20px;
+	border: 1px solid #372e29;
+	margin: 40px;
+	padding: 10px;
+}
+.upon-the-first {
+	background: antiquewhite;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 1px solid #372e29;
+}
+
+.ravenclaw-accordion {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	width: 12%;
+	width: 500px;
+	color: #946b2d;
+	background-color: #222f5b;
+	font-weight: bold;
+	border: 4px solid #946b2d;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+.ravenclaw-accordion__toggle {
+	text-align:center;
+	padding: 10px;
+	width: 100%;
+}
+
+.ravenclaw-accordion__toggle:hover {
+	color: #222f5b;
+	background: #946b2d;
+	border: 4px solid #222f5b;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.ravenclaw-accordion__content {
+	display: none;
+	padding: 10px;
+}
+
+.ravenclaw-accordion__content--visible {
+	display: block;
+}
+
+.hufflepuff-accordion {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	width: 12%;
+	width: 500px;
+	color: #372e29;
+	background-color: #ecb939;
+	font-weight: bold;
+	border: 4px solid #372e29;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+.hufflepuff-accordion__toggle {
+	text-align:center;
+	padding: 10px;
+	width: 100%;
+}
+
+.hufflepuff-accordion__toggle:hover {
+	color: #ecb939;
+	background: #372e29;
+	border: 4px solid #ecb939;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.hufflepuff-accordion__content {
+	display: none;
+	padding: 10px;
+}
+
+.hufflepuff-accordion__content--visible {
+	display: block;
+}
+
+.gryffindor-accordion {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	width: 12%;
+	width: 500px;
+	color: rgb(204, 159, 45);
+	background-color: #740001;
+	font-weight: bold;
+	border: 4px solid rgb(204, 159, 45);
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.gryffindor-accordion__toggle {
+	text-align:center;
+	padding: 10px;
+	width: 100%;
+}
+
+.gryffindor-accordion__toggle:hover {
+	color: #740001;
+	background: #eeba30;
+	border: 4px solid #740001;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.gryffindor-accordion__content {
+	display: none;
+	padding: 10px;
+}
+
+.gryffindor-accordion__content--visible {
+	display: block;
+}
+
+.slytherin-accordion {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	width: 12%;
+	width: 500px;
+	color: #aaaaaa;
+	background-color: #1a472a;
+	font-weight: bold;
+	border: 4px solid #aaaaaa;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+.slytherin-accordion__toggle {
+	text-align:center;
+	padding: 10px;
+	width: 100%;
+}
+
+.slytherin-accordion__toggle:hover {
+	color: #1a472a;
+	background: #aaaaaa;
+	border: 4px solid #1a472a;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.slytherin-accordion__content {
+	display: none;
+	padding: 10px;
+}
+
+.slytherin-accordion__content--visible {
+	display: block;
+}
+
+.accordion__toggle-button:hover {
+	background: #b08257;
+}
+.accordion__toggle-button:active {
+	background: #bfbfbf;
+}
+
+.subjects-supplies {
+	background: antiquewhite;
+	font-family: system-ui;
+	overflow: hidden;
+	border-radius: 20px;
+	border: 1px solid #372e29;
+	padding: 20px;
+	padding-left: 25px;
+	position: relative;
+	text-align: left;
+	list-style-type: circle;
+	color: #372e29;
+}
+
+.subjects {
+	text-decoration-line: underline;
+	font-weight: bold;
+	font-size: large;
+}
+
+.supplies {
+	text-decoration-line: underline;
+	font-weight: bold;
+	font-size: large;
+}
+
+
+  
+.thegreathall {
+	width: 95%;
+	height: auto;
+	float: center;
+	border: 2px solid #372e29;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+/* Footer start */
+
+.footer {
+	margin-top: 150px;
+	width: 100%;
+	padding: 100px 0;
+	background: #333;
+	color: #efefef;
+	display: flex;
+}
+
+.footer div {
+	text-align: center;
+	width:33%;
+}
+
+.column-2 {
+	flex-grow: 2;
+}
+
+.footer div h3 {
+	font-weight: 300;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+.column-1 a{
+	display: block;
+	text-decoration: none;
+	color: #efefef;
+	margin-bottom: 10px;
+}
+
+form input {
+	width: 400px;
+	height: 45px;
+	border-radius: 4px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	outline: none;
+	border: none;
+}
+
+form button {
+	background: transparent;
+	border: 2px, solid, #fff;
+	color: #fff;
+	border-radius: 30px;
+	padding: 10px 30px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.social-icons {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	min-width:100%;
+}
+.social-icons i {
+	font-size: 22px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+/* Footer end */
