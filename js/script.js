@@ -1,3 +1,6 @@
+/* Asynchronous JavaScript and Fetch API */
+
+
 /* DENNE FUNKER VELDIG BRA TIL OPPGAVEN SIKKERT 
 her har jeg lært å hente mange ting */ 
 
