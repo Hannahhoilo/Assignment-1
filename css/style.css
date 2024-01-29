@@ -40,6 +40,24 @@ body {
 	top: 10px;
   }
 
+.header2 {
+	color: gold;
+	text-align: center;
+	/*text-decoration-line: underline; */
+	font-weight: normal;
+	font-size: 25px;
+	font-family: 'star jedi hollow';
+	border: gold 3px;
+	padding: 10px 20px;
+	width: 100%;
+	
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	position: sticky;
+	top: 10px;
+}
+
 .colors {
 	color: #414042;
 	color: #eee6dd;
