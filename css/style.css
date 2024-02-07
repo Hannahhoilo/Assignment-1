@@ -118,7 +118,9 @@ body {
 	color: #372e29;
 }
 
-/* Films page start */
+/* ----------------------------------- */
+
+/* Lists */
 
 .list-container {
 	align-items: center;
@@ -145,18 +147,78 @@ li span{
     text-align: center;
     /* border: 1px solid white; */
 }
-.title, .release_date {
-    flex-basis: 10%;
+.createdLi{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 18.75rem;
+    margin-bottom: 0.5rem;
+    background-color: lightskyblue;
+    border-radius: 0.5rem;
 }
 
-.episode_id, .director{
+/* Lists end*/
+
+/* ---------------------------------------- */
+
+/* Film page start */
+
+.title, .episode_id {
     flex-basis: 10%;
 }
 
 .opening_crawl{
-	flex-basis: 50%;
+	flex-basis: 40%;
 }
 
+.director, .release_date {
+    flex-basis: 10%;
+}
+
+/* ----- */
+
+.filmTitle, .filmEpisodeId { /* 20% */
+    flex-basis: 10%;
+}
+
+.filmOpeningCrawl{
+    flex-basis: 40%;
+}
+
+.filmReleaseDate, .filmDirector{ /* 20% */
+    flex-basis: 10%;
+}
+
+.filmImgContainer{
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filmImg{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    border-radius: 2%;
+}
+
+/* Film page end */
+
+/* ----------------------------------- */
+
+/* People page start */
+
+.name, .birth_year {
+    flex-basis: 10%;
+}
+
+.species, .homeworld{
+    flex-basis: 10%;
+}
+
+.films{
+	flex-basis: 50%;
+}
 
 .createdLi{
     display: flex;
@@ -167,30 +229,31 @@ li span{
     background-color: lightskyblue;
     border-radius: 0.5rem;
 }
-.filmTitle, .filmReleaseDate {
+.peopleName, .peopleBirthYear {
     flex-basis: 10%;
 }
 
-.filmEpisodeId, .filmDirector{
+.peopleSpecies, .peopleHomeworld{
     flex-basis: 10%;
 }
 
-.filmOpeningCrawl{
+.peopleFilms{
     flex-basis: 50%;
 }
 
-.filmPictureContainer{
+.peopleImgContainer{
     flex-basis: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.filmPicture{
+.peopleImg{
     width: 70%;
     height: 70%;
     object-fit: contain;
     border-radius: 2%;
 }
+
 .button-container{
     display: flex;
     justify-content: space-around;
@@ -211,7 +274,119 @@ li span{
     cursor: pointer;
 }
 
-/* Film page end */
+
+/* People page end */
+
+/* ----------------------------------- */
+
+/* Planets page start */
+
+.list-container {
+	align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 5%;
+}
+
+ul{
+    list-style: none;
+}
+.list-header{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    height: 4rem;
+    background-color: azure;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+li span{
+    text-align: center;
+    /* border: 1px solid white; */
+}
+.name, .population {
+    flex-basis: 10%;
+}
+
+.climate, .residents{
+    flex-basis: 10%;
+}
+
+.films{
+	flex-basis: 50%;
+}
+
+
+.createdLi{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 18.75rem;
+    margin-bottom: 0.5rem;
+    background-color: lightskyblue;
+    border-radius: 0.5rem;
+}
+.planetName, .planetPopulation {
+    flex-basis: 10%;
+}
+
+.planetClimate, .planetResidents{
+    flex-basis: 10%;
+}
+
+.planetFilms{
+    flex-basis: 50%;
+}
+
+.planetPictureContainer{
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planetPicture{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    border-radius: 2%;
+}
+
+/* Planets page end */
+
+/* ----------------------------------- */
+
+/* Vehicles page start */
+
+.vehicleName, .vehicleModel { /* 30% */
+    flex-basis: 15%;
+}
+
+.vehicleCostInCredits, .vehicleFilms{  /* 40% */
+    flex-basis: 20%;
+}
+
+.vehiclePilots{
+    flex-basis: 10%;
+}
+
+.vehicleImgContainer{
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vehicleImg{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    border-radius: 2%;
+}
+
+/* Vehicles page end */
+
+/* ----------------------------------- */
 
 /* Footer start */
 
@@ -280,3 +455,29 @@ form button {
 }
 
 /* Footer end */
+
+/*
+Art by Rowan Crawford
+
+               ________
+          _,.-Y  |  |  Y-._
+      .-~"   ||  |  |  |   "-.
+      I" ""=="|" !""! "|"[]""|     _____
+      L__  [] |..------|:   _[----I" .-{"-.
+     I___|  ..| l______|l_ [__L]_[I_/r(=}=-P
+    [L______L_[________]______j~  '-=c_]/=-^
+     \_I_j.--.\==I|I==_/.--L_]
+       [_((==)[`-----"](==)j
+          I--I"~~"""~~"I--I
+          |[]|         |[]|
+          l__j         l__j
+          |!!|         |!!|
+          |..|         |..|
+          ([])         ([])
+          ]--[         ]--[
+          [_L]         [_L]  -Row  (the Ascii-Wizard of Oz)
+         /|..|\       /|..|\
+        `=}--{='     `=}--{='
+       .-^--r-^-.   .-^--r-^-.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
