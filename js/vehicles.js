@@ -108,6 +108,9 @@ const fetchDetails = async (url) => {
   return data;
 };
 
+// add counter for images
+let i = 1; 
+
 const renderData = async (vehicles) => {
   for (const vehicle of vehicles) {
     const li = document.createElement("li");
@@ -116,40 +119,51 @@ const renderData = async (vehicles) => {
     const costInCredits = document.createElement("span");
     const films = document.createElement("span");
     const pilots = document.createElement("span");
-    const pictureContainer = document.createElement("span");
-    const picture = document.createElement("img");
+    const imgContainer = document.createElement("span");
 
+    // Appending elements 
     vehiclesList.append(li);
-    li.append(name, model, costInCredits, films, pilots, picture, pictureContainer);
-    pictureContainer.append(picture);
-
+    li.append(name, model, costInCredits, films, pilots, imgContainer);
+    
+    // Adding classes to the created elements
     li.classList.add("createdLi");
     name.classList.add("vehicleName");
     model.classList.add("vehicleModel");
     costInCredits.classList.add("vehicleCostOnCredits");
     films.classList.add("vehicleFilms");
     pilots.classList.add("vehiclePilots");
-    pictureContainer.classList.add("filmPictureContainer");
-    picture.classList.add("filmPicture");
+    imgContainer.classList.add("vehicleImgContainer");
 
+    // Setting the content of the created elements
     name.textContent = vehicle.name;
-    model.textContent = `Model: ${vehicle.model}`;
-    costInCredits.textContent = `Cost in Credits: ${vehicle.cost_in_credits}`;
+    model.textContent = ` ${vehicle.model}`;
+    costInCredits.textContent = ` ${vehicle.cost_in_credits}`;
+    pilots.textContent = vehicle.pilots;
+
 
     // Fetch and display film names
     const filmNames = await Promise.all(vehicle.films.map(async (filmUrl) => {
       const filmData = await fetchDetails(filmUrl);
       return filmData.title;
     }));
-    films.textContent = `Films: ${filmNames.join(", ")}`;
+    films.textContent = ` ${filmNames.join(", ")}`;
 
-    // Fetch and display pilot names
+    // Fetch and display pilot names without the title
     const pilotNames = await Promise.all(vehicle.pilots.map(async (pilotUrl) => {
       const pilotData = await fetchDetails(pilotUrl);
       return pilotData.name;
     }));
-    pilots.textContent = `Pilots: ${pilotNames.join(", ")}`;
+    pilots.textContent = `${pilotNames.join(", ")}`;
 
-    picture.src = "../assets/pictures/st-ep-4-cover.jpg"; // You can replace this with the actual picture URL
+
+    // Create and append an image for each vehicle
+    const img = document.createElement("img");
+    img.src = `assets/pictures/Vehicles/sw-vehicles-${i}.webp`; // Use counter i to reference different images
+    img.alt = vehicle.name;
+    img.classList.add("vehicleImg");
+    imgContainer.appendChild(img);
+  
+	  i++; // increment counter for next iteration
+    if (i > 8) { i = 1; } // reset counter if you have only 2 images
   }
 };

@@ -350,16 +350,24 @@ const renderData = async (people) => {
     birthYear.textContent = person.birth_year;
     species.textContent = person.species;
 
+    
+    // Fetch and display species names
+    const speciesNames = await Promise.all(person.species.map(async (speciesUrl) => {
+      const speciesData = await fetchDetails(speciesUrl);
+      return speciesData.title;
+      }));
+    species.textContent = ` ${speciesNames.join(", ")}`;
+
     // Fetch and display homeworld name
     const homeworldData = await fetchDetails(person.homeworld);
-    homeworld.textContent = `Homeworld: ${homeworldData.name}`;
+    homeworld.textContent = ` ${homeworldData.name}`;
 
     // Fetch and display film names
     const filmNames = await Promise.all(person.films.map(async (filmUrl) => {
       const filmData = await fetchDetails(filmUrl);
       return filmData.title;
     }));
-    films.textContent = `Films: ${filmNames.join(", ")}`;
+    films.textContent = ` ${filmNames.join(", ")}`;
 
     // Create and append an image for each character
     const img = document.createElement("img");

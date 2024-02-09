@@ -181,6 +181,8 @@ const fetchDetails = async (url) => {
   return data;
 };
 
+// add counter for images
+let i = 1; 
 const renderData = async (planets) => {
 	for (const planet of planets) {
 	  // CREATING ELEMENTS
@@ -190,13 +192,11 @@ const renderData = async (planets) => {
 	  const climate = document.createElement("span");
 	  const residents = document.createElement("span");
 	  const films = document.createElement("span");
-	  const pictureContainer = document.createElement("span");
-	  const picture = document.createElement("img");
+	  const imgContainer = document.createElement("span"); 
   
 	  // APPENDING ELEMENTS
 	  planetsList.append(li);
-	  li.append(name, population, climate, residents, films, picture, pictureContainer);
-	  pictureContainer.append(picture);
+	  li.append(name, population, climate, residents, films, imgContainer);
   
 	  // ADDING CLASSES TO THE CREATED ELEMENTS
 	  li.classList.add("createdLi");
@@ -205,16 +205,11 @@ const renderData = async (planets) => {
 	  climate.classList.add("planetClimate");
 	  residents.classList.add("planetResidents");
 	  films.classList.add("planetFilms");
-	  pictureContainer.classList.add("planetPictureContainer");
-	  picture.classList.add("planetPicture");
+	  imgContainer.classList.add("planetImgContainer");
   
 	  // SETTING THE CONTENT OF THE CREATED ELEMENTS
 	  name.textContent = planet.name;
-	  
-	  // Display population without title
 	  population.textContent = planet.population;
-  
-	  // Display climate without title
 	  climate.textContent = planet.climate;
   
 	  // Fetch and display residents' names without title
@@ -230,9 +225,16 @@ const renderData = async (planets) => {
 		return filmData.title;
 	  }));
 	  films.textContent = `${filmNames.join(", ")}`;
+
+    // Create and append an image for each character
+    const img = document.createElement("img");
+    img.src = `assets/pictures/Planets/sw-planets-${i}.webp`; // Use counter i to reference different images
+    img.alt = planet.name;
+    img.classList.add("planetImg");
+    imgContainer.appendChild(img);
   
-	  // Set a default image source (you can modify this based on your requirements)
-	  picture.src = "../assets/pictures/default-planet-image.jpg";
+	  i++; // increment counter for next iteration
+    if (i > 13) { i = 1; } // reset counter if you have only 2 images
 	}
-  };
+};
 
