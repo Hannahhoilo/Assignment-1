@@ -5,8 +5,8 @@ body {
 	background-attachment: fixed;
 
 	background-color: #cccccc; /* Used if the image is unavailable */
-	height: 500px; /* You must set a specified height */
-	background-position: center; /* Center the image */
+	height: 500px; 
+	background-position: center;
 
 
   }
@@ -15,7 +15,6 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	/* width: 250px; */
 	width: 400px;
 	height: auto;
   }
@@ -24,8 +23,6 @@ body {
   .header {
 	color: gold;
 	text-align: center;
-	
-	/*text-decoration-line: underline; */
 	font-weight: normal;
 	font-size: 50px;
 	font-family: 'star jedi hollow';
@@ -44,14 +41,12 @@ body {
 .header2 {
 	color: gold;
 	text-align: center;
-	/*text-decoration-line: underline; */
 	font-weight: normal;
 	font-size: 25px;
 	font-family: 'star jedi hollow';
 	border: gold 3px;
 	padding: 10px 20px;
 	width: 100%;
-	
 	flex-flow: row nowrap;
 	align-items: flex-start;
 	justify-content: space-between;
